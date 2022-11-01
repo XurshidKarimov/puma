@@ -159,22 +159,23 @@ a {
   transform: rotate(180deg);
 }
 
-header, section, footer {
-  padding: 0 calc(50vw - 595px);
-}
-
 .section__title {
   text-transform: uppercase;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 150%;
   letter-spacing: 0.05em;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 150%;
   color: #EE5514;
+  opacity: 1;
 }
 
 .section__subtitle {
   font-size: 44px;
   line-height: 130%;
+}
+
+header, section, footer {
+  padding: 0 calc(50vw - 595px);
 }
 
 .head__block {
@@ -190,8 +191,8 @@ header, section, footer {
 }
 .head__block header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 .head__block header .logo__navigation {
   display: flex;
@@ -206,8 +207,8 @@ header, section, footer {
 }
 .head__block header .logo__navigation .navigation__list li a {
   text-transform: capitalize;
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
   line-height: 160%;
   color: #1A0A03;
   opacity: 0.7;
@@ -232,25 +233,26 @@ header, section, footer {
 }
 .head__block__content .headpage__title__block__title {
   font-family: "Source Serif Pro";
-  font-weight: 600;
   font-size: 61px;
+  font-weight: 600;
   line-height: 120%;
   color: #1A0A03;
+  opacity: 1;
 }
 .head__block__content .headpage__title__block__title span {
   color: #EE5514;
 }
 .head__block__content .headpage__title__block__subtitle {
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
   line-height: 160%;
   color: #1A0A03;
   opacity: 0.7;
 }
 .head__block__content .headpage__item-slider {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
   -moz-column-gap: 75px;
        column-gap: 75px;
   width: 50%;
@@ -280,22 +282,23 @@ header, section, footer {
   border-radius: 5px;
   display: flex;
   align-items: center;
-  background-color: white;
   justify-content: space-between;
+  background-color: white;
 }
 .head__block__content .headpage__item__choose__block__part__name {
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
   line-height: 160%;
   color: #1A0A03;
   opacity: 0.7;
   margin-bottom: 10px;
 }
 .head__block__content .headpage__item__choose__block__part .dropdown {
-  font-weight: 500;
   font-size: 18px;
+  font-weight: 500;
   line-height: 160%;
   color: #1A0A03;
+  opacity: 1;
   position: relative;
 }
 .head__block__content .headpage__item__choose__block__part .dropdown::after {
@@ -324,8 +327,8 @@ header, section, footer {
   padding-top: 70px;
 }
 .video__start__content__text {
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
   line-height: 160%;
   color: #1A0A03;
   opacity: 0.7;
@@ -411,16 +414,18 @@ header, section, footer {
 .feature__card__block__card__text {
   margin: 10px 0px 20px;
   text-align: center;
-  font-weight: 400;
   font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
   color: #1A0A03;
   opacity: 0.7;
 }
 .feature__card__block__card__link {
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 160%;
   color: #EE5514;
+  opacity: 1;
   display: flex;
   align-items: center;
   -moz-column-gap: 10px;
@@ -439,8 +444,8 @@ header, section, footer {
 }
 .gallary .category__swipe {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 50px;
 }
 .gallary .category__swipe .category {
@@ -450,12 +455,12 @@ header, section, footer {
   align-items: center;
 }
 .gallary .category__swipe .category h4 {
-  font-weight: 400;
   font-size: 20px;
+  font-weight: 400;
   line-height: 140%;
-  letter-spacing: 0.05em;
   color: #1A0A03;
   opacity: 0.7;
+  letter-spacing: 0.05em;
 }
 .gallary .category__swipe .category .category__list {
   display: flex;
@@ -463,13 +468,13 @@ header, section, footer {
        column-gap: 40px;
 }
 .gallary .category__swipe .category .category__list li a {
-  text-transform: capitalize;
-  font-weight: 400;
   font-size: 18px;
+  font-weight: 400;
   line-height: 140%;
-  letter-spacing: 0.05em;
   color: #1A0A03;
   opacity: 0.7;
+  text-transform: capitalize;
+  letter-spacing: 0.05em;
   padding-bottom: 7px;
   position: relative;
 }
@@ -523,15 +528,15 @@ header, section, footer {
   line-height: 150%;
 }
 .gallary__cards-card__content__itemSize, .gallary__cards-card__content__itemPrice {
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 160%;
   color: #1A0A03;
   opacity: 0.8;
 }
 .gallary__cards-card__content__itemSize span, .gallary__cards-card__content__itemPrice span {
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
   line-height: 160%;
   color: #1A0A03;
   opacity: 0.7;
@@ -539,10 +544,11 @@ header, section, footer {
 }
 .gallary__cards-card__content .btn {
   align-self: baseline;
+  letter-spacing: 0.03em;
   padding: 15px 30px;
+  font-weight: 500;
   font-size: 14px;
   line-height: 150%;
-  letter-spacing: 0.03em;
 }
 
 .testimonials {
@@ -567,31 +573,33 @@ header, section, footer {
   height: 100px;
 }
 .testimonials__content .testimonials__quote__title {
-  font-weight: 600;
   font-size: 22px;
+  font-weight: 600;
   line-height: 150%;
   color: #1A0A03;
+  opacity: 1;
   margin-bottom: 16px;
 }
 .testimonials__content .testimonials__quote__text {
   font-style: italic;
-  font-weight: 500;
+  margin-bottom: 25px;
   font-size: 14px;
+  font-weight: 500;
   line-height: 160%;
   color: #1A0A03;
   opacity: 0.7;
-  margin-bottom: 25px;
 }
 .testimonials__author {
-  font-weight: 500;
   font-size: 18px;
+  font-weight: 500;
   line-height: 160%;
   color: #1A0A03;
+  opacity: 1;
   margin-bottom: 10px;
 }
 .testimonials__who {
-  font-weight: 400;
   font-size: 14px;
+  font-weight: 400;
   line-height: 160%;
   color: #1A0A03;
   opacity: 0.8;
@@ -610,8 +618,9 @@ header, section, footer {
   margin-bottom: 20px;
 }
 .newsletter__sign-up__text {
-  font-weight: 400;
   font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
   color: #1A0A03;
   opacity: 0.7;
   margin-bottom: 40px;
@@ -627,24 +636,28 @@ header, section, footer {
 }
 .newsletter__sign-up form input::-moz-placeholder {
   font-size: 14px;
+  font-weight: 400;
   line-height: 150%;
   color: #1A0A03;
   opacity: 0.5;
 }
 .newsletter__sign-up form input:-ms-input-placeholder {
   font-size: 14px;
+  font-weight: 400;
   line-height: 150%;
   color: #1A0A03;
   opacity: 0.5;
 }
 .newsletter__sign-up form input::placeholder {
   font-size: 14px;
+  font-weight: 400;
   line-height: 150%;
   color: #1A0A03;
   opacity: 0.5;
 }
 .newsletter__sign-up form button {
   padding: 15px 30px;
+  font-weight: 400;
   font-size: 14px;
   line-height: 150%;
   letter-spacing: 0.03em;
@@ -659,8 +672,8 @@ footer .footer__top {
   margin-bottom: 40px;
 }
 footer .footer__top__adress__content__adressname, footer .footer__top__adress__content > a {
-  font-weight: 400;
   font-size: 18px;
+  font-weight: 400;
   line-height: 160%;
   color: #1A0A03;
   opacity: 0.7;
@@ -715,6 +728,7 @@ footer .footer__top__contact form input {
 }
 footer .footer__top__contact form button {
   padding: 15px 30px;
+  font-weight: 500;
   font-size: 14px;
   line-height: 160%;
 }
@@ -728,8 +742,8 @@ footer hr {
 footer .footer__bottom {
   padding: 30px 0;
   text-align: center;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 160%;
   color: #1A0A03;
   opacity: 0.7;

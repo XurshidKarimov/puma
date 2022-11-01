@@ -1,6 +1,27 @@
 @use "nullstyle.scss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Source+Serif+Pro:wght@600&display=swap');
 
+@mixin btnSetting($paddingTB, $paddingLR, $fontW: 400, $fontS, $lineH){
+    padding: $paddingTB $paddingLR;
+    font-weight: $fontW;
+    font-size: $fontS;
+    line-height: $lineH;
+}
+
+@mixin fontSetting($fSize, $fWeight, $lHeight, $fColor, $fOpacity: 1){
+    font-size: $fSize;
+    font-weight: $fWeight;
+    line-height: $lHeight;
+    color: $fColor;
+    opacity: $fOpacity;
+}
+
+@mixin flexTriplet($aItems, $jContent) {
+    display: flex;
+    align-items: $aItems;
+    justify-content: $jContent;
+}
+
 *{
     scroll-behavior: smooth;
 }
@@ -37,9 +58,7 @@ a{
         height: 50px;
         border-radius: 50%;
         background: rgba(238, 85, 20, 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flexTriplet(center, center);
         &.swap__btn:first-child{
             opacity: 0.4;
             transform: rotate(180deg);                
@@ -47,22 +66,19 @@ a{
     }
 }
 
-header, section, footer{
-    padding: 0 calc(50vw - 595px);
-}
-
 .section__title{
     text-transform: uppercase;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 150%;
     letter-spacing: 0.05em;
-    color: #EE5514;
+    @include fontSetting(20px, 600, 150%, #EE5514, 1);
 }
 
 .section__subtitle{
     font-size: 44px;
     line-height: 130%;
+}
+
+header, section, footer{
+    padding: 0 calc(50vw - 595px);
 }
 
 .head__block{
@@ -76,9 +92,7 @@ header, section, footer{
         }
     }
     & header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flexTriplet(center, space-between);
         & .logo__navigation{
             display: flex;
             align-items: center;
@@ -88,11 +102,7 @@ header, section, footer{
                 column-gap: 41px;
                 & li a{
                     text-transform: capitalize;
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 160%;
-                    color: #1A0A03;
-                    opacity: 0.7;
+                    @include fontSetting(16px, 400, 160%, #1A0A03, 0.7);
                     &:hover{
                         color: #EE5514;
                     }
@@ -100,10 +110,7 @@ header, section, footer{
             }
         }
     & .btn{
-        padding: 15px 32px;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 160%;
+        @include btnSetting(15px, 32px, 500, 18px, 160%);
     }
     }
     &__content{
@@ -116,26 +123,17 @@ header, section, footer{
             justify-content: center;
             &__title{
                 font-family: 'Source Serif Pro';
-                font-weight: 600;
-                font-size: 61px;
-                line-height: 120%;
-                color: #1A0A03;
+                @include fontSetting(61px, 600, 120%, #1A0A03, 1);
                 & span{
                     color: #EE5514;
                 }
             }
             &__subtitle{
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 160%;
-                color: #1A0A03;
-                opacity: 0.7;
+                @include fontSetting(16px, 400, 160%, #1A0A03, 0.7);
             }
         }
         &__item-slider{
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
+            @include flexTriplet(center, flex-end);
             column-gap: 75px;
             width: 50%;
             margin-bottom: 50px;
@@ -154,34 +152,23 @@ header, section, footer{
                 height: 69px;
                 border-radius: 50%;
                 background: rgba(238, 85, 20, 0.1);
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include flexTriplet(center, center);
             }
         }
         &__item__choose__block{
             max-width: 817px;
             padding: 30px 57px;
             box-shadow: 0px 1px 14px rgba(26, 10, 3, 0.05);
-            border-radius: 5px; 
-            display: flex;
-            align-items: center;
+            border-radius: 5px;
+            @include flexTriplet(center, space-between);
             background-color: white;
-            justify-content: space-between;
             &__part{
                 &__name{
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 160%;
-                color: #1A0A03;
-                opacity: 0.7;
+                @include fontSetting(16px, 400, 160%, #1A0A03, 0.7);
                 margin-bottom: 10px;
                 }
                 & .dropdown{
-                    font-weight: 500;
-                    font-size: 18px;
-                    line-height: 160%;
-                    color: #1A0A03;
+                    @include fontSetting(18px, 500, 160%, #1A0A03, 1);
                     position: relative;
                     &::after{
                         content: "";
@@ -196,10 +183,7 @@ header, section, footer{
                 }
             }
             & .btn{
-                padding: 15px 30px;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 160%;
+                @include btnSetting(15px, 30px, 500, 16px, 160%);
             }
         }
        }
@@ -214,11 +198,7 @@ header, section, footer{
         padding-top: 70px;
         &__content{
             &__text{
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 160%;
-                color: #1A0A03;
-                opacity: 0.7;
+                @include fontSetting(16px, 400, 160%, #1A0A03, 0.7);
                 margin-top: 20px;
             }
         } 
@@ -245,9 +225,7 @@ header, section, footer{
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include flexTriplet(center, center);
                 width: 100px;
                 height: 100px;
                 border-radius: 50%;
@@ -288,9 +266,7 @@ header, section, footer{
                 width: 140px;
                 height: 140px;
                 border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include flexTriplet(center, center);
                 background: rgba(18, 101, 225, 0.1);
                 margin-bottom: 38px;
             }
@@ -302,16 +278,10 @@ header, section, footer{
             &__text{
                 margin: 10px 0px 20px;
                 text-align: center;
-                font-weight: 400;
-                font-size: 14px;
-                color: #1A0A03;
-                opacity: 0.7;
+                @include fontSetting(14px, 400, 160%, #1A0A03, 0.7);
             }
             &__link{
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 160%;
-                color: #EE5514;
+                @include fontSetting(16px, 500, 160%, #EE5514, 1);
                 display: flex;
                 align-items: center;
                 column-gap: 10px;
@@ -334,33 +304,23 @@ header, section, footer{
     }
 
     & .category__swipe{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flexTriplet(center, space-between);
         margin-bottom: 50px;
         & .category{
             display: flex;
             column-gap: 35px;
             align-items: center;
             & h4{
-                font-weight: 400;
-                font-size: 20px;
-                line-height: 140%;
+                @include fontSetting(20px, 400, 140%, #1A0A03, 0.7);
                 letter-spacing: 0.05em;
-                color: #1A0A03;
-                opacity: 0.7;
             }
             & .category__list{
                 display: flex;
                 column-gap: 40px;
                 & li a{
+                    @include fontSetting(18px, 400, 140%, #1A0A03, 0.7);
                     text-transform: capitalize;
-                    font-weight: 400;
-                    font-size: 18px;
-                    line-height: 140%;
                     letter-spacing: 0.05em;
-                    color: #1A0A03;
-                    opacity: 0.7;
                     padding-bottom: 7px;
                     position: relative;
                     &::before{
@@ -415,28 +375,18 @@ header, section, footer{
                }
                &__itemSize,
                &__itemPrice{
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 160%;
-                color: #1A0A03;
-                opacity: 0.8;
+                @include fontSetting(16px, 500, 160%, #1A0A03, 0.8);
                }
                &__itemSize span,
                &__itemPrice span
                {
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 160%;
-                color: #1A0A03;
-                opacity: 0.7;
+                @include fontSetting(16px, 400, 160%, #1A0A03, 0.7);
                 margin-right: 10px;
                }
                & .btn{
                 align-self: baseline;
-                padding: 15px 30px;
-                font-size: 14px;
-                line-height: 150%;
                 letter-spacing: 0.03em;
+                @include btnSetting(15px, 30px, 500, 14px, 150%);
                }
             }
         }
@@ -463,36 +413,22 @@ header, section, footer{
         }
         & .testimonials__quote{
             &__title{
-                font-weight: 600;
-                font-size: 22px;
-                line-height: 150%;
-                color: #1A0A03;
+                @include fontSetting(22px, 600, 150%, #1A0A03, 1);
                 margin-bottom: 16px;
             }
             &__text{
                 font-style: italic;
-                font-weight: 500;
-                font-size: 14px;
-                line-height: 160%;
-                color: #1A0A03;
-                opacity: 0.7;
                 margin-bottom: 25px;
+                @include fontSetting(14px, 500, 160%, #1A0A03, 0.7);
             }
         }
     }
     &__author{
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 160%;
-        color: #1A0A03;
+        @include fontSetting(18px, 500, 160%, #1A0A03, 1);
         margin-bottom: 10px;
     }
     &__who{
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 160%;
-        color: #1A0A03;
-        opacity: 0.8;
+        @include fontSetting(14px, 400, 160%, #1A0A03, 0.8);
     }
     
 }
@@ -508,10 +444,7 @@ header, section, footer{
             margin-bottom: 20px;
         }
         &__text{
-            font-weight: 400;
-            font-size: 18px;
-            color: #1A0A03;
-            opacity: 0.7;
+            @include fontSetting(18px, 400, 160%, #1A0A03, 0.7);
             margin-bottom: 40px;
         }
         & form{
@@ -522,16 +455,11 @@ header, section, footer{
                 border-radius: 5px;
                 flex-grow: 1;
                 &::placeholder{
-                    font-size: 14px;
-                    line-height: 150%;
-                    color: #1A0A03;
-                    opacity: 0.5;
+                    @include fontSetting(14px, 400, 150%, #1A0A03, 0.5);
                 }
             }
             & button{
-                padding: 15px 30px;
-                font-size: 14px;
-                line-height: 150%;
+                @include btnSetting(15px, 30px, 400, 14px, 150%);
                 letter-spacing: 0.03em;
             }
         }
@@ -546,11 +474,7 @@ footer{
         margin-bottom: 40px;
        &__adress__content__adressname,
        &__adress__content > a{
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 160%;
-        color: #1A0A03;
-        opacity: 0.7;
+        @include fontSetting(18px, 400, 160%, #1A0A03, 0.7);
         margin-top: 23px;
        }
        &__adress__content__adressname{
@@ -607,15 +531,12 @@ footer{
             border-radius: 5px;
         }
         & button{
-            padding: 15px 30px;
-            font-size: 14px;
-            line-height: 160%;
+            @include btnSetting(15px, 30px, 500, 14px, 160%);
    }
        }
        &__support{
         flex-grow: 1;
        }
-
     }
     hr{
         height: 1px;
@@ -624,10 +545,6 @@ footer{
     .footer__bottom{
         padding: 30px 0;
         text-align: center;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 160%;
-        color: #1A0A03;
-        opacity: 0.7;
+        @include fontSetting(16px, 500, 160%, #1A0A03, 0.7);
     }
 }
