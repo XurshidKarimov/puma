@@ -502,7 +502,7 @@ footer{
        & ul li:not(:first-child, :last-child){
         margin-bottom: 10px;
        }
-       & ul li a,
+       & ul li a:not(.social li a),
        &__contact li:not(li.form){
             position: relative;
             color: #1A0A03;
@@ -521,7 +521,7 @@ footer{
             transition: .2s linear;
        }
 
-       & ul li a:hover:after{
+       & ul li a:not(a[title^="link to"]):hover:after{
             width: 100%;
        }
 
